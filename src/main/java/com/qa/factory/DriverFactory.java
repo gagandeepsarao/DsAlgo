@@ -25,8 +25,8 @@ public class DriverFactory {
 		//System.out.println("browser value is:"+System.getenv("BROWSER"));
 		//System.out.println("NUMBER_OF_PROCESSORS is:"+System.getenv("NUMBER_OF_PROCESSORS"));
 		
-		browser = System.getenv("BROWSER");
 		
+		browser = System.getenv("BROWSER");
 		if(browser.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
