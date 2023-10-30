@@ -8,12 +8,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.util.Constants;
 
-import io.cucumber.messages.types.Duration;
 
 public class ArrayPage {
 	
@@ -112,7 +109,6 @@ public class ArrayPage {
 	public boolean isAnswerDisplayed() throws InterruptedException
 	{
 		String text =  driver.findElement(answerform).getText();
-		Thread.sleep(1000);
 		if(text.isBlank())
 			return false;
 		return true;
@@ -121,16 +117,8 @@ public class ArrayPage {
 	
 	public void present_alertMsg() throws InterruptedException
 	{
-		Thread.sleep(5000);
 		Alert alert= driver.switchTo().alert();
 		System.out.println(alert.getText());
-		String text = alert.getText();
-//		if(text.equals("NameError: name 'color' is not defined on line 1")) {
-//			System.out.println("correct alert msg");
-//		}
-//		else {
-//			System.out.println("in-correct alert msg");
-//		}
 		alert.accept();
 		}
 	
